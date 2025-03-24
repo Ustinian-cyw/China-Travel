@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>智能助手集成</title>
+    <style>
+        /* 自定义浮动提示容器 */
+        /* .coze-guide {
+            position: fixed;
+            right: 160px;  /* 根据按钮位置调整 */
+           /* bottom: 40px;
+            background: #ffffff;
+            padding: 16px 24px; */
+            /* border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            animation: float 2s ease-in-out infinite;
+            z-index: 1000;
+            border: 1px solid #e0e0e0;
+        } */ */
+
+        /* 引导箭头 */
+        /* .guide-arrow {
+            width: 20px;
+            height: 20px;
+            background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 24 24" fill="%23007BFF"><path d="M12 2L2 22h20z"/></svg>');
+        } */
+
+        /* 浮动动画 */
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* 智能体容器定制 */
+        /* #coze-container {
+            position: fixed;
+            right: 30px;
+            bottom: 30px;
+            width: 400px;
+            height: 600px;
+            border-radius: 16px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.1); 
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        } */
+
+        /* 移动端适配 */
+        @media (max-width: 768px) {
+            .coze-guide {
+                right: 20px;
+                bottom: 100px;
+                max-width: 200px;
+            }
+            #coze-container {
+                width: 100%;
+                height: 80vh;
+                right: 0;
+                bottom: 0;
+                border-radius: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 引导提示 -->
+    <div class="coze-guide" id="guideTip">
+        <div class="guide-arrow"></div>
+        <div>
+            <h3 style="margin:0 0 8px 0; color: #333;">需要帮助？</h3>
+            <p style="margin:0; color: #666;">点击右下角图标开启智能助手</p>
+        </div>
+    </div>
+
+    <!-- Coze容器 -->
+    <div id="coze-container"></div>
+
+    <!-- SDK -->
+    <script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.2.0-beta.5/libs/cn/index.js"></script>
+	<script>
+	  new CozeWebSDK.WebChatClient({
+	    config: {
+	      bot_id: '7483545471857295371',
+	    },
+	    componentProps: {
+	      title: 'Coze',
+	    },
+	    auth: {
+	      type: 'token',
+	      token: 'pat_aF0QdvKrgQoCAaEzdwNpl3uww9IPB3ZtTnfFVRvDbWfPfhB03FRud7yij6kethaL',
+	      onRefreshToken: function () {
+	        return 'pat_aF0QdvKrgQoCAaEzdwNpl3uww9IPB3ZtTnfFVRvDbWfPfhB03FRud7yij6kethaL'
+	      }
+	    }
+	  });
+	</script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 初始化智能体
+            const client = new CozeWebSDK.WebChatClient({
+                config: {
+                    bot_id: '7483545471857295371',
+                    environment: 'production',
+                    region: 'cn'
+                },
+                componentProps: {
+                    container: '#coze-container',
+                    launchButton: true,
+                    launchStyle: {
+                        position: 'fixed',
+                        right: '30px',
+                        bottom: '30px',
+                        width: '60px',
+                        height: '60px',
+                        borderRadius: '50%',
+                        boxShadow: '0 8px 24px rgba(0,0,0,0.2)'
+                    }
+                },
+                auth: { /* 您的认证配置 */ }
+            });
+
+            // 智能体打开时隐藏提示
+            client.on('open', () => {
+                document.getElementById('guideTip').style.display = 'none';
+            });
+
+            // 5秒后自动隐藏提示
+            let guideTimer = setTimeout(() => {
+                document.getElementById('guideTip').style.opacity = '0';
+                setTimeout(() => {
+                    document.getElementById('guideTip').style.display = 'none';
+                }, 500);
+            }, 5000);
+
+            // 点击提示立即隐藏
+            document.getElementById('guideTip').addEventListener('click', () => {
+                clearTimeout(guideTimer);
+                document.getElementById('guideTip').style.display = 'none';
+            });
+        });
+    </script>
+</body>
+</html>

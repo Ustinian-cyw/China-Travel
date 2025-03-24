@@ -1,0 +1,355 @@
+@font-face {
+  font-family: 'zhengwen';
+  src: url('../fonts/zhengwen.otf') format('truetype')
+}
+@font-face {
+  font-family: 'siyuanhei';
+  src: url('../fonts/NotoSansCJK-Light-3.otf') format('truetype')
+}
+@font-face {
+  font-family: 'Bagnard';
+  src: url('../fonts/Bagnard-2.otf') format('truetype')
+}
+@font-face {
+  font-family: 'canger';
+  src: url('../fonts/CangErYuMoW02-2.ttf') format('truetype')
+}
+@font-face {
+  font-family: 'source sans pro';
+  src: url('../fonts/Source-Sans-Pro-Light-2.otf') format('truetype');
+}
+@font-face {
+  font-family: 'Chalkboard';
+  src: url('../fonts/Chalkboard-SE-2.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'button';
+  src: url('../fonts/NotoSansCJK-Regular-1.otf') format('truetype')
+}
+
+html {
+  /* 将文本行高设置为字体大小的 1.15 倍 */
+  line-height: 1.15;
+  /* 在移动设备上确保文本大小不会被浏览器自动调整 */
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  /* background-color: #faeee7;
+  background-image: url("https://transparenttextures.com/patterns/inspiration-geometry.png");
+  background-attachment: fixed; */
+  /* background-image: linear-gradient(to bottom, #ffddd9, #fff2d8, #e3edd4, #caf0fe, #E1E5FF, #ffddd9);
+  transition: background-position 0.5s ease; */
+  /* 平滑过渡效果 */
+  margin: 0;
+  max-width: 100vw;
+  overflow-x: hidden;
+  background-color: #efe5ca;
+}
+@media screen and (max-width: 767px) {
+  body {
+    overflow-x: hidden;
+  }
+  html,body {
+    max-width: 100%;
+  }
+}
+
+
+
+
+.content {
+  width: 60%;
+  margin: 0 auto;
+  padding: 10px 60px;
+  color: #343434;
+  font-size: 1em;
+  line-height: 2em;
+  font-family: 'zhengwen';
+}
+@media only screen and (max-width: 600px) {
+  .content {
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px 10px;
+    color: #343434;
+    font-size: 14px;
+    line-height: 1.8em;
+    font-family: 'zhengwen';
+  }
+}
+
+p,span {
+  font-family: 'zhengwen';
+}
+
+.content p,.content span{
+  margin: 2em auto;
+}
+
+.intro-text p {
+  font-family: 'zhengwen';
+  font-weight: 100;
+  font-size: 16px;
+  line-height: 2em;
+  margin: 0 10% 1.5em 10%;
+}
+
+@media only screen and (max-width: 600px) {
+  .intro-text p {
+    font-family: 'zhengwen';
+    font-weight: 100;
+    font-size: 14px;
+    line-height: 1.6em;
+    margin: 0 0 1.5em 0;
+  }
+}
+/* 首行缩进 */
+/* #chpt1 .content p {
+  text-indent: 2em;
+}
+
+
+#chpt2 .content p {
+  text-indent: 2em;
+} */
+#note {
+  /* background-color: #fefbf4; */
+  font-size: 12px;
+  color: #999999;
+  display: inline-block;
+  padding: 10px 5px;
+  width: 900px;
+  line-height: 1.4em;
+  z-index: 2;
+}
+
+
+#note p {
+  text-indent: 0 !important;
+  z-index: 2 !important;
+}
+
+
+@media only screen and (max-width: 600px) {
+  #note {
+    /* background-color: #fefbf4; */
+    font-size: 10px;
+    color: #999999;
+    display: inline-block;
+    padding: 10px 5px;
+    max-width: 100%;
+    width: 100%;
+    line-height: 1.4em;
+    z-index: 2;
+    margin: 5em auto;
+  }
+}
+
+.tiktok-text {
+  position: relative;
+  z-index: 2;
+  margin-top: 50em;
+}
+
+
+.chpt1-ana1{
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  /* margin-top: 60em; */
+  margin-top: 10em;
+}
+
+.fixed-left {
+  flex: 1;
+  z-index: 1;
+}
+
+.scroll-right {
+  flex: 1;
+}
+
+.fixed-element {
+  position: relative;
+  margin-bottom: 10em;
+}
+
+.fixed-element.active {
+  position: fixed;
+  opacity: 1;
+}
+
+.word-text,.tripad-text {
+  position: relative;
+  z-index: 2;
+  flex: 1;
+  margin-bottom: 10em;
+}
+
+.word-p,.tripad-p {
+  font-size: 1.1em;
+  width: 70%;
+  padding: 20px 40px;
+  /* box-sizing: border-box; */
+  /* color: rgb(7, 5, 5); */
+  /* background-color: rgb(255, 255, 255); */
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20em;
+  line-height: 2rem;
+  text-align: justify;
+  /* box-shadow: 0px 0px 6px 3px #bcbcbc; */
+}
+
+.emoji-text {
+  margin-top: 15em;
+}
+
+.wordbox p {
+  font-size: 12px;
+  color: #b2b0b0;
+  text-align: center;
+  margin-top: 3em;
+  width: 100%;
+  line-height: 2;
+  font-family: 'source sans pro';
+}
+
+@media screen and (max-width: 767px) {
+  .chpt1-ana {
+    flex-direction: column;
+    /* 将布局改为垂直方向 */
+    align-items: center;
+    /* 居中对齐 */
+  }
+
+  .fixed-left,
+  .scroll-right {
+    width: 100%;
+    /* 让左右两部分都占据整个宽度 */
+    margin: 0;
+    /* 去除左右两部分的外边距 */
+  }
+
+  /* .emoji-text {
+    order: 1;
+    margin-top: -480em;
+    margin-bottom: 80em;
+     调整顶部间距 
+  } */
+
+  .word-text {
+    order: 2;
+    margin-bottom: 80em;
+  }
+
+  .tripad-text {
+    order: 3;
+    margin-bottom: 50em;
+    /* 调整顶部间距 */
+  }
+
+  .word-p,
+  .tripad-p {
+    width: 90%;
+    /* 调整段落宽度 */
+  }
+
+  .wordbox p {
+    font-size: 14px;
+    /* 调整文字大小 */
+    margin-top: 1em;
+    /* 调整段落间距 */
+  }
+}
+
+.policy {
+  z-index: 1;
+}
+
+.chpt2-text img {
+  max-width: 100%;
+  height: auto;
+  margin: 1% auto;
+  display: block;
+}
+.chpt3-text img {
+  max-width: 50%;
+  height: auto;
+  margin:  auto;
+  display: block;
+}
+
+/* 封面图 */
+.cover {
+  text-align: center;
+}
+#chap1 {
+    display: block;
+  }
+
+  #chap2 {
+    display: block;
+  }
+
+  #chap3 {
+    display: block;
+  }
+
+  #policy {
+    height: 600px;
+  }
+}
+#chpt1-cover {
+  position: relative;
+  max-width: 100vw;
+  margin-top: 80px;
+}
+
+.chap1 {
+  position: relative;
+  width: 30%;
+  z-index: 1;
+  display: block;
+  margin: 0 auto;
+}
+
+#chpt2-cover {
+  position: relative;
+  max-width: 100vw;
+  margin-top: 100px;
+}
+
+.chap2 {
+  position: relative;
+  width: 70%;
+  z-index: 1;
+  display: block;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 600px) {
+  .chap1 {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .chap2 {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .chap3 {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    display: block;
+    margin: 0 auto;
+  }
+}

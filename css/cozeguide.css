@@ -1,0 +1,27 @@
+#guideTip {
+		            position: absolute;
+		            right: 400px;
+		            bottom: 0px; 
+		            background: rgba(255,255,255,0.95);
+		            padding: 16px 24px;
+		            border-radius: 12px;
+		            box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+		            animation: float 2s ease-in-out infinite;
+		            z-index: 1000;
+		            border: 1px solid #eee;
+		            max-width: 400px;
+		        }
+		
+		        @keyframes float {
+		            0%, 100% { transform: translateY(0); }
+		            50% { transform: translateY(-8px); }
+		        }
+		
+		        /* 智能体容器 */
+		        #coze-container {
+		            position: relative;
+		            margin: 100px auto;
+		            width: 100%;
+		            max-width: 1200px;
+		            min-height: 500px;
+		        }
