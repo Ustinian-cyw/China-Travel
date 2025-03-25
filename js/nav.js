@@ -1,5 +1,5 @@
 document.querySelector("#tointro").onclick = function() {
-    document.querySelector("#intro").scrollIntoView({ behavior: 'smooth', block: 'start' });
+    document.querySelector("#intro").scrollIntoView({ behavior: 'smooth', block: 'center' });
 };
 
 document.querySelector("#tochpt1").onclick = function() {
