@@ -1,0 +1,239 @@
+/* 原有电脑端样式保持不变 */
+.chpt1-ana1{
+  display: flex;
+  justify-content: space-between;
+  /* justify-content: center; */
+  align-items: stretch;
+  /* align-items: center; */
+  /* margin-top: 60em; */
+  margin-top: 10em;
+}
+
+.fixed-left {
+  flex: 1;
+  z-index: 1;
+  padding-left: 3%;
+}
+
+.scroll-right {
+  flex: 1;
+  align-self: center;
+}
+
+.fixed-element {
+  position: relative;
+  margin-bottom: 10em;
+}
+
+.fixed-element.active {
+  position: fixed;
+  opacity: 1;
+}
+
+.word-text,.tripad-text {
+  position: relative;
+  z-index: 2;
+  flex: 1;
+  margin-bottom: 10em;
+}
+
+/* 朱砂色标题装饰 */
+.word-p span ,.tripad-p span{
+  background: none !important;
+  position: relative;
+  /* padding-left: 2.2rem; */
+  display: inline-block;
+  color: #c53d13; /* 朱砂红 */
+}
+
+.emoji-text {
+  margin-top: 15em;
+}
+
+.wordbox p {
+  font-size: 12px;
+  color: #b2b0b0;
+  text-align: center;
+  margin-top: 3em;
+  width: 100%;
+  line-height: 2;
+  font-family: 'source sans pro';
+}
+
+.word-p,.tripad-p {
+	position: relative;
+	font-size: 1em;
+	width: 70%;
+	padding: 20px 40px;
+	z-index: 10;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 20em;
+	line-height: 2rem;
+	text-align: justify;
+	color: #5a4a32; /* 文字颜色 */
+	overflow: hidden;
+	/* background: linear-gradient(to right, #fff9f0 0%, #fff 100%); */
+	/* 背景效果 */
+	/* border: 1px solid #e0c9a6; /* 边框 */ */
+	/* box-shadow: 8px 8px 24px rgba(0,0,0,0.06); */
+	box-shadow: 4px 4px 12px rgba(199,179,153,0.15); /* 阴影 */
+	background-blend-mode: multiply;
+	background-image: 
+		/* 纹理 */
+	    url('data:image/svg+xml;utf8,<svg width="400" height="400" xmlns="http://www.w3.org/2000/svg"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency=".8"/></filter><rect width="100%" height="100%" filter="url(%23n)" opacity=".3"/></svg>'),
+		/* 背景颜色 */
+		linear-gradient(
+			15deg,
+	        #f5e8d5 0%,   /* 仿古宣纸底色 */
+	        #fff3e6 30%,  /* 渐变过渡色 */
+	        #fff9f0 70%,  /* 中间亮部 */
+	        #fff 100%     /* 最终高光 */
+	    );
+	opacity: 0; /* 初始隐藏 */
+	transform-style: preserve-3d;
+	transition: all 0.6s ease-out;
+	
+	transform: translate3d(0,0,0);
+	backface-visibility: hidden;
+}
+
+
+/* 毛边效果 */
+ .word-p::before,.tripad-p::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(
+      145deg,
+      rgba(224,201,166,0) 0%,
+      rgba(224,201,166,0.25) 30%,
+      rgba(224,201,166,0.15) 70%,
+      rgba(224,201,166,0) 100%
+    );
+    border-radius: 2px;
+    z-index: 1;
+    pointer-events: none;
+	/* transition: all 0.6s ease;  墨迹悬停反馈 */
+} 
+  
+/* .word-p:hover::before, .tripad-p:hover::before {
+  background: linear-gradient(
+    145deg,
+    rgba(224,201,166,0.15) 0%,
+    rgba(224,201,166,0.35) 30%,
+    rgba(224,201,166,0.25) 70%,
+    rgba(224,201,166,0.1) 100%
+  );
+  transform: scale(1.02);
+} */
+
+
+/* ===== 书法笔触入场动画 ===== */
+@keyframes brushEntry {
+  0% {
+    opacity: 0;
+    background-size: 0% 100%;
+    transform: translateY(40px) rotateZ(1deg);
+    filter: blur(3px);
+  }
+  100% {
+    opacity: 1;
+    background-size: 100% 100%;
+    transform: translateY(0) rotateZ(0);
+    filter: blur(0);
+  }
+}
+.brush-entry {
+  background: 
+    /* linear-gradient(to right, 
+      #5a4a32 0%, 
+      #5a4a32 100%
+    ) left top / 0% 100% no-repeat, */
+    linear-gradient(15deg, 
+      #f5e8d5 0%, 
+      #fff3e6 30%, 
+      #fff9f0 70%, 
+      #fff 100%
+    );
+  animation: brushEntry 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) forwards !important;
+}
+/* ===== 竹简离场动画 ===== */
+@keyframes bambooExit {
+  0% {
+    transform: perspective(1000px) rotateX(0) translateZ(0);
+    opacity: 1;
+  }
+  100% {
+    transform: perspective(1000px) rotateX(60deg) translateZ(-200px);
+    opacity: 0.3;
+  }
+}
+
+.bamboo-exit {
+  animation: bambooExit 0.8s cubic-bezier(0.55, 0.085, 0.68, 0.53) forwards !important;
+}
+  
+
+
+
+
+
+/* 移动端适配 */
+/* 修改后的移动端适配 */
+@media screen and (max-width: 767px) {
+  .chpt1-ana1 {
+    flex-direction: column;
+    margin-top: 5em;
+    display: flex !important; /* 强制flex布局 */
+	max-width: 100vw !important;
+	box-sizing: border-box;
+	overflow: hidden;
+  }
+
+  /* 穿透两个父级容器 */
+  .fixed-left,
+  .scroll-right,
+  .scroll-right > .whitebox {
+    display: contents !important; /* 解除所有容器限制 */
+  }
+
+  /* 重新定义顺序 */
+  #fixed-element-0 { order: 1; }   /* 词频图 */
+  #word-text       { order: 2; }   /* 对应文字 */
+  #fixed-element-2 { order: 3; }   /* trip图 */
+  #tripad-text     { order: 4; }   /* 对应文字 */
+
+  /* 统一元素样式 */
+  .fixed-element,
+  .word-text,
+  .tripad-text {
+    width: 90% !important;
+    margin: 0 auto 3em !important;
+    position: static !important;
+  }
+
+  /* 调整具体元素间距 */
+  #fixed-element-0 { margin-bottom: 2em !important; }
+  #word-text       { margin-bottom: 4em !important; }
+  #fixed-element-2 { margin-top: 2em !important;width: 100% !important; }
+  
+  /* 修复文字容器样式 */
+  .word-p,
+  .tripad-p {
+    width: 90% !important;
+    padding: 1em !important;
+    margin-bottom: 3em !important;
+	font-size: 14px;
+  }
+  @keyframes brushEntry {
+      0% { transform: translateY(20px); }
+    }
+  @keyframes bambooExit {
+      100% { transform: rotateX(45deg) translateZ(-100px); }
+    }
+  
+}
