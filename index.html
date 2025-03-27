@@ -10,19 +10,10 @@
 		<link rel="stylesheet" href="css/main.css">
 		<link rel="stylesheet" href="css/nav.css"/>
 		<link rel="stylesheet" href="css/cozeguide.css"/>
+		<link rel="stylesheet" href="css/chpt1-ana1-test.css"/>
 		<!-- <link rel="stylesheet" href="css/coze.css"> -->
 	</head>
 	<body>
-		<!-- 导航栏 -->
-		<div id="nav-intro">
-			<nav class="navbox">
-				<button class="navbox" id="tointro">引言</button>
-				<button class="navbox" id="tochpt1">part1</button>
-				<button class="navbox" id="tochpt2">part2</button>
-				<button class="navbox" id="tochpt3">part3</button>
-				<button class="navbox" id="tomethods">结语</button>
-			</nav>
-		</div>
 		<!-- 封面 -->
 		<div class="cover">
 			<img src="imgaes/maincover2.png" width="70%" height="auto"/>
@@ -267,36 +258,38 @@
 		            <p>点击右下角图标开启您的个性化旅行规划体验</p>
 		        </div>
 		    </div>
-		
+
+		<!--  结语-->
 		<div id="methods" class="part">	
 		  <div class="content methods-text">
 		    <br><br>
 		    <p>文化，乃融通世界的交流之桥，愿来自世界各地的游客能够从山川古迹中读中国史、见中国心；</p>
 		    <p>文化，乃是各民族的精神旗帜，愿八方来客可以借此了解更为真实、真诚又富有生命的中华民族，与我们交友，与我们共建美好未来。</p>
-		    <!-- <p>
-		      从驼铃声声，到列车飞驰；从货轮不止，到天空布满的航线。穿越几千年的时空，如今，同中国正式建交的国家已超过一百八十个，中国的国门已经向全世界打开，欢迎世界各地人民的到来。我们正在变得越来越好，为远道而来的朋友们带来最好的体验，而永远不变的，是我们的友爱和热情。
-		    </p>
-		    <p>正如中国那句古话所讲：有朋自远方来，不亦乐乎？
-		    </p>
-		    <p>
-		      亲爱的朋友，我们在这里真挚期待你的到来，来领略古老中国独特神奇的文化魅力，了解和发现现代中国日新月异的发展变化，感受来自礼仪之邦的中国人民热情友好的待客之道，解锁你的中国奇遇！
-		      中国欢迎你！
-		    </p> -->
 		  </div>
-		    <!-- SDK脚本 -->
-			<script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.1.0-beta.0/libs/cn/index.js"></script>
-		    <!-- <script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.2.0-beta.5/libs/cn/index.js"></script> -->
-		    <script src="js/coze.js"></script>
-			<!-- <script src="js/coze_test.js"></script> -->
-		    <!-- 初始化脚本 -->
-			<script src="js/nav.js"></script>
-		
+			
+		<!-- 导航栏 -->
+		<div id="nav-intro">
+			<nav class="navbox">
+				<button class="navbox" id="tointro">引言</button>
+				<button class="navbox" id="tochpt1">part1</button>
+				<button class="navbox" id="tochpt2">part2</button>
+				<button class="navbox" id="tochpt3">part3</button>
+				<button class="navbox" id="tomethods">结语</button>
+			</nav>
+		</div>
+			
+		<!-- AI旅游线路规划 -->
+		 <!--coze SDK脚本 -->
+		<script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.1.0-beta.0/libs/cn/index.js"></script>
+		<!-- <script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.2.0-beta.5/libs/cn/index.js"></script> -->
+		<script src="js/coze.js"></script>
+		<!-- 初始化脚本 -->
+		<!-- <script src="js/coze_test.js"></script> -->
 		<!-- 推荐使用官方最新SDK -->
 		<!-- <script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk@latest/libs/cn/index.js"></script> -->
-		<!--  结语-->
-		<!-- AI旅游线路规划 -->
-		
-		
-		
+
+		<!--其他脚本 -->
+		<script src="js/nav.js"></script>
+		<script src="js/scroll-test.js"></script>
 	</body>
 </html>
