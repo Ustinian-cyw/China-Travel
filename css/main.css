@@ -54,7 +54,9 @@ body {
   }
 }
 
-
+.top {
+  max-height: 100vh;
+}
 
 
 .content {
@@ -145,6 +147,11 @@ p,span {
   }
 }
 
+.content #note {
+  width: 100%; /* 继承.content的宽度设置 */
+  max-width: inherit; /* 继承父级最大宽度 */
+}
+
 .tiktok-text {
   position: relative;
   z-index: 2;
@@ -152,116 +159,7 @@ p,span {
 }
 
 
-.chpt1-ana1{
-  display: flex;
-  justify-content: space-between;
-  align-items: stretch;
-  /* margin-top: 60em; */
-  margin-top: 10em;
-}
 
-.fixed-left {
-  flex: 1;
-  z-index: 1;
-}
-
-.scroll-right {
-  flex: 1;
-}
-
-.fixed-element {
-  position: relative;
-  margin-bottom: 10em;
-}
-
-.fixed-element.active {
-  position: fixed;
-  opacity: 1;
-}
-
-.word-text,.tripad-text {
-  position: relative;
-  z-index: 2;
-  flex: 1;
-  margin-bottom: 10em;
-}
-
-.word-p,.tripad-p {
-  font-size: 1.1em;
-  width: 70%;
-  padding: 20px 40px;
-  /* box-sizing: border-box; */
-  /* color: rgb(7, 5, 5); */
-  /* background-color: rgb(255, 255, 255); */
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 20em;
-  line-height: 2rem;
-  text-align: justify;
-  /* box-shadow: 0px 0px 6px 3px #bcbcbc; */
-}
-
-.emoji-text {
-  margin-top: 15em;
-}
-
-.wordbox p {
-  font-size: 12px;
-  color: #b2b0b0;
-  text-align: center;
-  margin-top: 3em;
-  width: 100%;
-  line-height: 2;
-  font-family: 'source sans pro';
-}
-
-@media screen and (max-width: 767px) {
-  .chpt1-ana {
-    flex-direction: column;
-    /* 将布局改为垂直方向 */
-    align-items: center;
-    /* 居中对齐 */
-  }
-
-  .fixed-left,
-  .scroll-right {
-    width: 100%;
-    /* 让左右两部分都占据整个宽度 */
-    margin: 0;
-    /* 去除左右两部分的外边距 */
-  }
-
-  /* .emoji-text {
-    order: 1;
-    margin-top: -480em;
-    margin-bottom: 80em;
-     调整顶部间距 
-  } */
-
-  .word-text {
-    order: 2;
-    margin-bottom: 80em;
-  }
-
-  .tripad-text {
-    order: 3;
-    margin-bottom: 50em;
-    /* 调整顶部间距 */
-  }
-
-  .word-p,
-  .tripad-p {
-    width: 90%;
-    /* 调整段落宽度 */
-  }
-
-  .wordbox p {
-    font-size: 14px;
-    /* 调整文字大小 */
-    margin-top: 1em;
-    /* 调整段落间距 */
-  }
-}
 
 .policy {
   z-index: 1;
