@@ -1,0 +1,317 @@
+:root {
+    --bg-color: #efe5ca;
+    --ink-red: #e47258;
+    --moss-green: #58ae93;
+    --sky-blue: #75b3be;
+    --nav-width: 320px;
+}
+
+/* 基础样式 */
+/* body {
+    margin: 0;
+    background: var(--bg-color);
+    font-family: 'Noto Serif SC', serif;
+    padding-left: var(--nav-width);
+}
+
+.part {
+    padding: 2rem;
+    min-height: 100vh;
+    transition: margin 0.3s ease;
+} */
+
+/* 导航主容器 */
+.poetic-nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: var(--nav-width);
+    background: rgba(239, 229, 202, 0.98);
+    border-right: 1px solid rgba(232, 164, 117, 0.2);
+    box-shadow: 4px 0 20px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* 导航头部 */
+.nav-header {
+    padding: 2rem;
+    border-bottom: 1px dashed var(--ink-red);
+}
+
+.seal-logo {
+    position: relative;
+    width: 120px;
+}
+
+.seal-logo .chinese {
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+    font-size: 2.4rem;
+    color: var(--ink-red);
+    position: relative;
+    z-index: 1;
+}
+
+.seal-logo .circle {
+    position: absolute;
+    width: 110%;
+    height: 120%;
+    background: var(--bg-color);
+    border: 3px solid var(--moss-green);
+    border-radius: 50%;
+    top: -10%;
+    left: -5%;
+}
+
+/* 导航项 */
+.nav-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1rem 0;
+}
+
+.nav-card {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+    margin: 1rem;
+    background: linear-gradient(145deg, 
+        rgba(255,255,255,0.8) 0%, 
+        rgba(232,164,117,0.05) 100%);
+    border-radius: 8px;
+    position: relative;
+    transition: transform 0.3s ease;
+    text-decoration: none;
+}
+
+.deco-line {
+    width: 4px;
+    height: 40px;
+    background: var(--sky-blue);
+    margin-right: 1rem;
+    border-radius: 2px;
+    transition: background 0.3s ease;
+}
+
+.text-box {
+    flex: 1;
+}
+
+.title {
+    font-size: 1.1rem;
+    color: #2d2d2d;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin: 0;
+}
+
+.sub {
+    font-size: 0.9rem;
+    color: var(--moss-green);
+    margin-top: 0.5rem;
+}
+
+/* 悬停效果 */
+.hover-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.3);
+    clip-path: circle(0% at -30% 50%);
+    transition: clip-path 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-card:hover {
+    transform: translateX(10px);
+}
+
+.nav-card:hover .hover-mask {
+    clip-path: circle(150% at 50% 50%);
+}
+
+.nav-card:hover .deco-line {
+    background: var(--ink-red);
+}
+.nav-active .poetic-nav {
+    transform: translateX(0) !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+
+/* 桌面端顶部导航 */
+@media (min-width: 1025px) {
+    .poetic-nav {
+        position: fixed;
+        top: 0px;
+        left: 0;
+        width: 100%;
+        height: 60px;
+        background: rgba(239, 229, 202, 0.95);
+        flex-direction: row;
+        transition: top 0.3s ease;
+        z-index: 1000;
+    }
+
+    .nav-header {
+        padding: 0 2rem;
+        border-bottom: none;
+    }
+
+    .nav-content {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        overflow: visible;
+    }
+
+    .nav-card {
+        margin: 0 1rem;
+        padding: 0 1.5rem;
+        height: 100%;
+        background: none;
+    }
+
+    /* 隐藏桌面端触发条 */
+    .nav-trigger {
+            position: fixed;
+            top: 0; /* 调整位置到顶部边缘 */
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 12px;
+            background: var(--ink-red);
+            border-radius: 0 0 4px 4px;
+            cursor: pointer;
+            opacity: 0.3;
+            transition: opacity 0.3s, top 0.3s;
+            display: block !important;
+            z-index: 1001; /* 确保在导航栏上方 */
+        }
+		.nav-trigger:hover {
+		        opacity: 1;
+		        top: 0 !important;
+		    }
+		
+		    /* 导航栏悬停逻辑 */
+		    .poetic-nav:not(.scroll-down):hover {
+		        top: 0 !important;
+		    }
+			
+	
+
+    /* 修复滚动隐藏问题 */
+    /* .poetic-nav.scroll-down {
+        top: -60px !important;
+    } */
+}
+@media (max-width: 1024px) {
+    .poetic-nav {
+        transform: translateX(-100%);
+        visibility: hidden;
+        opacity: 0;
+        transition: transform 0.3s, opacity 0.3s, visibility 0.3s !important;
+    }
+}
+
+/* 平板端侧边导航（显示触发箭头） */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .poetic-nav {
+        transform: translateX(-100%);
+        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .tablet-trigger {
+        position: fixed;
+        left: 20px;
+        top: 50%;
+        width: 32px;
+        height: 32px;
+        cursor: pointer;
+        z-index: 1001;
+        opacity: 0.8;
+        transition: transform 0.3s;
+    }
+    
+    .tablet-trigger:hover {
+        transform: translateX(5px);
+        opacity: 1;
+    }
+    
+    .nav-active .poetic-nav {
+        transform: translateX(0);
+    }
+}
+
+/* 移动端样式（显示菜单按钮） */
+@media (max-width: 768px) {
+    body {
+        padding-left: 0;
+    }
+
+    .poetic-nav {
+        width: 30%;
+		height: 80%;
+		/* height: 10rem; */
+        transform: translateX(-100%);
+        box-shadow: none;
+    }
+
+    .mobile-trigger {
+        display: flex;
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        z-index: 2000;
+        flex-direction: column;
+        gap: 5px;
+        padding: 12px;
+        background: rgba(239, 229, 202, 0.9);
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        cursor: pointer;
+    }
+
+    .bamboo-line {
+        width: 28px;
+        height: 2px;
+        background: var(--ink-red);
+        transition: 0.3s;
+    }
+
+    /* 移动端按钮动画 */
+    .nav-active .bamboo-line:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    .nav-active .bamboo-line:nth-child(2) {
+        opacity: 0;
+    }
+
+    .nav-active .bamboo-line:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+
+    .nav-active .poetic-nav {
+        transform: translateX(0);
+    }
+}
+
+/* 隐藏非平板端的触发箭头 */
+@media (max-width: 768px), (min-width: 1025px) {
+    .tablet-trigger {
+        display: none !important;
+        width: 0;
+        height: 0;
+        opacity: 0;
+        pointer-events: none;
+    }
+}
