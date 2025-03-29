@@ -158,12 +158,12 @@ p,span {
   margin-top: 50em;
 }
 
-
-
-
 .policy {
   z-index: 1;
 }
+#policy {
+    height: 600px;
+  }
 
 .chpt2-text img {
   max-width: 100%;
@@ -181,7 +181,6 @@ p,span {
 /* 封面图 */
 .cover {
   text-align: center;
-  /* margin: 80px auto; */
 }
 #chap1 {
     display: block;
@@ -195,17 +194,13 @@ p,span {
     display: block;
   }
 
-#policy {
-    height: 600px;
-  }
-
 #chpt1-cover {
   position: relative;
   width: 100%;
   margin: 9.375rem auto 9rem;
   /* margin-top: 180px; */
   /* margin-top: 15.625rem;
-  margin-bottom: 11.25rem; */
+  /* margin-bottom: 11.25rem; */
   max-width: 1440px;
 }
 
