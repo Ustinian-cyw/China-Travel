@@ -29,7 +29,7 @@
     width: var(--nav-width);
     background: rgba(239, 229, 202, 0.98);
     border-right: 1px solid rgba(232, 164, 117, 0.2);
-    box-shadow: 4px 0 20px rgba(0, 0, 0, 0.05);
+    /* box-shadow: 4px 0 20px rgba(0, 0, 0, 0.05); */
     display: flex;
     flex-direction: column;
     z-index: 1000;
@@ -44,7 +44,11 @@
 
 .seal-logo {
     position: relative;
-    width: 120px;
+    width: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center; 
+	padding: 10% 0; 
 }
 
 .seal-logo .chinese {
@@ -53,17 +57,18 @@
     color: var(--ink-red);
     position: relative;
     z-index: 1;
+	transform: translateY(10%); 
 }
 
 .seal-logo .circle {
     position: absolute;
-    width: 110%;
+    width: 120%;
     height: 120%;
     background: var(--bg-color);
     border: 3px solid var(--moss-green);
     border-radius: 50%;
-    top: -10%;
-    left: -5%;
+    top: 0%;
+    left: -10%;
 }
 
 /* 导航项 */
