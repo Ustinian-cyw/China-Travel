@@ -1,4 +1,4 @@
-#guideTip {
+/* #guideTip {
 		            position: absolute;
 		            right: 400px;
 		            bottom: 0px; 
@@ -15,13 +15,65 @@
 		        @keyframes float {
 		            0%, 100% { transform: translateY(0); }
 		            50% { transform: translateY(-8px); }
-		        }
+		        } */
 		
 		        /* 智能体容器 */
-		        #coze-container {
+/* 		        #coze-container {
 		            position: relative;
 		            margin: 100px auto;
 		            width: 100%;
 		            max-width: 1200px;
 		            min-height: 500px;
-		        }
+		        } */
+.coze-tip {
+  position: fixed;
+  right: 90px;
+  bottom: 45px;
+  background: rgba(255,255,255,0.9);
+  padding: 8px 15px;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  font-family: "楷体", cursive;
+  color: #634b36;
+  font-size: 14px;
+  border-left: 3px solid #c33;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  animation: float 3s ease-in-out infinite; 
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+/* 覆盖Coze默认样式 */
+.coze-chat-button {
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M20 50Q30 30 50 20q20 10 30 30-10 20-30 30-20-10-30-30z" fill="%23c33" opacity="0.2"/></svg>') !important;
+  border-radius: 50% 50% 50% 0 !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
+  transition: all 0.3s ease !important;
+}
+
+/* 动态光效 */
+.coze-chat-button::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(0.9); opacity: 1; }
+  100% { transform: scale(1.3); opacity: 0; }
+}
+
+/* 悬停效果 */
+.coze-chat-button:hover {
+  transform: translateY(-5px) rotate(-5deg) !important;
+}
+
+.coze-chat-button:hover + .coze-tip {
+  opacity: 1;
+}
