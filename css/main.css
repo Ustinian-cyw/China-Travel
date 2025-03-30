@@ -276,3 +276,80 @@ p,span {
     margin: 0 auto;
   }
 }
+
+/* 携程数据图 */
+/* 主容器 */
+    .scroll-container {
+		width: 60%;
+        display: grid;
+        grid-template-columns: 75% 25%;
+        gap: 2rem;
+        min-height: 100vh;
+        padding: 2rem 0;
+		margin: 0 auto;
+    }
+
+    /* 固定图表容器 */
+    .fixed-chart {
+        position: sticky;
+        top: 70px;
+        height: calc(85vh - 40px);
+        background: rgba(255,255,255,0.3);
+        border: 2px solid #8b4513;
+        border-radius: 12px;
+        padding: 1rem;
+    }
+
+    /* 滚动文案容器 */
+    .scroll-narrative {
+        position: relative;
+        padding-right: 1rem;
+		padding-top: 20rem; /* 增加顶部留白 */
+		margin-left: -1rem;
+    }
+
+    /* 季度文案块 */
+    .season-card {
+        margin-bottom: 80vh;
+        opacity: 0;
+        transform: translateY(40px);
+		transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1); /* 平滑动画曲线 */
+        /* transition: all 0.6s ease; */
+        padding: 2rem;
+        background: rgba(255,255,255,0.4);
+        border-radius: 8px;
+        box-shadow: 3px 3px 10px rgba(0,0,0,0.05);
+        border-left: 4px solid #8b4513;
+    }
+
+    .season-card.active {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* 装饰元素 */
+    .season-card::before {
+        content: '';
+        position: absolute;
+        left: -2.2rem;
+        top: 50%;
+        width: 24px;
+        height: 24px;
+        background: #efe5ca;
+        border: 2px solid #8b4513;
+        border-radius: 50%;
+        transform: translateY(-50%);
+    }
+	
+@media (max-width: 768px) {
+        .scroll-container {
+            grid-template-columns: 1fr;
+        }
+        .fixed-chart {
+            position: relative;
+            height: auto;
+        }
+        .season-card::before {
+            left: -1.5rem;
+        }
+    }
