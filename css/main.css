@@ -278,9 +278,6 @@ p,span {
 }
 
 footer {
-	/* background-color: #40b6ffc5; */
-	background-image: url(../images/footer.png);
-
 	background-size: cover;
 	background-position: center;
 	color: rgb(24, 23, 23);
@@ -289,17 +286,32 @@ footer {
 	line-height: 1.2;
 	font-size: 14px;
 }
-
+.section-title {
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-bottom: 2.5rem;
+    position: relative;
+    text-align: center;
+}
 footer p {
-	font-family: 'siyuanhei';
+	font-family: 'source sans pro';
 	margin-bottom: 2em;
+}
+.divider-line {
+    height: 1px;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        rgba(0,0,0,0.1) 50%, 
+        transparent 100%);
+    margin: 2rem auto;
+	width: 80%;
+    /* max-width: 600px; */
 }
 
 @media screen and (max-width: 600px) {
 
 	footer {
-		/* background-color: #40b6ffc5; */
-		background-image: url(../images/footer-ph.png);
 		background-size: cover;
 		background-position: center;
 		color: rgb(24, 23, 23);
