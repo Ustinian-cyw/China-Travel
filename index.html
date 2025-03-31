@@ -371,7 +371,85 @@
 		<!-- 推荐使用官方最新SDK -->
 		<!-- <script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk@latest/libs/cn/index.js"></script> -->
 		<!-- AI旅游线路规划 -->
-		
+		<script>
+			const carousel = document.querySelector(".carousel");
+			const arrows = document.querySelectorAll(".wrapper i");
+			const cards = document.querySelectorAll(".card");
+
+			let isDragStart = false,
+				isDragging = false,
+				prevPageX, prevScrollLeft, positionDiff;
+
+			// 获取卡片宽度（包含外边距）
+			const getCardWidth = () => {
+				const cardStyle = window.getComputedStyle(cards[0]);
+				return cards[0].offsetWidth + parseInt(cardStyle.marginLeft);
+			}
+
+			// 拖拽逻辑
+			const dragStart = (e) => {
+				isDragStart = true;
+				prevPageX = e.pageX || e.touches[0].pageX;
+				prevScrollLeft = carousel.scrollLeft;
+			}
+
+			const dragging = (e) => {
+				if (!isDragStart) return;
+				e.preventDefault();
+				carousel.classList.add("dragging");
+				positionDiff = (e.pageX || e.touches[0].pageX) - prevPageX;
+				carousel.scrollLeft = prevScrollLeft - positionDiff;
+				showHideArrows();
+			}
+
+			const dragStop = () => {
+				isDragStart = false;
+				carousel.classList.remove("dragging");
+				autoSlide();
+			}
+
+			// 箭头显示逻辑
+			const showHideArrows = () => {
+				const maxScroll = carousel.scrollWidth - carousel.clientWidth;
+				arrows[0].style.display = carousel.scrollLeft <= 0 ? "none" : "flex";
+				arrows[1].style.display = carousel.scrollLeft >= maxScroll ? "none" : "flex";
+			}
+
+			// 自动对齐
+			const autoSlide = () => {
+				if (carousel.scrollLeft === (carousel.scrollWidth - carousel.clientWidth)) return;
+
+				positionDiff = Math.abs(positionDiff);
+				const cardWidth = getCardWidth();
+				const valDifference = cardWidth - positionDiff;
+
+				if (carousel.scrollLeft > prevScrollLeft) {
+					carousel.scrollLeft += positionDiff > cardWidth / 3 ? valDifference : -positionDiff;
+				} else {
+					carousel.scrollLeft -= positionDiff > cardWidth / 3 ? valDifference : -positionDiff;
+				}
+			}
+
+			// 事件监听
+			arrows.forEach(btn => {
+				btn.addEventListener("click", () => {
+					carousel.scrollLeft += btn.id === "left" ? -getCardWidth() : getCardWidth();
+					setTimeout(showHideArrows, 60);
+				});
+			});
+
+			// 触摸/鼠标事件
+			carousel.addEventListener("mousedown", dragStart);
+			carousel.addEventListener("touchstart", dragStart);
+			document.addEventListener("mousemove", dragging);
+			document.addEventListener("touchmove", dragging);
+			document.addEventListener("mouseup", dragStop);
+			document.addEventListener("touchend", dragStop);
+			document.addEventListener("mouseleave", dragStop);
+
+			// 初始化隐藏箭头
+			showHideArrows();
+		</script>
 		
 	</body>
 </html>
