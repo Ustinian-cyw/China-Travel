@@ -155,7 +155,7 @@ p,span {
 .tiktok-text {
   position: relative;
   z-index: 2;
-  margin-top: 50em;
+/*   margin-top: 50em; */
 }
 
 .policy {
