@@ -1,0 +1,643 @@
+<!-- #e8a475 #75b3be #58ae93 #6a6f68
+#e47258 #256d93 -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+		<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> -->
+		<title>中国游升级图鉴</title>
+		<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="css/main.css">
+		<!-- <link rel="stylesheet" href="css/nav.css"/> -->
+		<link rel="stylesheet" href="css/cozeguide.css" />
+		<!-- <link rel="stylesheet" href="css/chpt1-ana1.css"/> -->
+		<link rel="stylesheet" href="css/chpt1-ana1-test.css" />
+		<!-- <link rel="stylesheet" href="css/nav-test1.css"/> -->
+		<link rel="stylesheet" href="css/nav-test3.css" />
+		<!-- <link rel="stylesheet" href="css/coze.css"> -->
+		
+		<style>
+		  .lang-button {
+		    display: inline-block;
+		    padding: 10px 20px;
+		    font-size: 14px;
+		    color: #f5e6c8;
+		    /* background-color: #f9d268; */
+			background-color: #9b1a1f;
+		    border-color: #d4af37;
+		    border-width: 2px;
+		    border-radius: 4px;
+		    cursor: pointer;
+		    text-decoration: none;
+		    margin-left: 10px;
+		    z-index: 99999;
+		    font-family: 'button';
+		  }
+		
+		  .lang-button:hover {
+		    background-color: #7a0e12;
+		  }
+		
+		  .lang-buttons-container {
+		    position: absolute;
+		    top: 10px;
+		    right: 20px;
+		    z-index: 99999;
+		  }
+		
+		  @media only screen and (max-width: 768px) {
+		    .lang-button {
+		      display: inline-block;
+		      padding: 5px 10px;
+		      font-size: 12px;
+		      color: #343434;
+		      background-color: #f9d268;
+		      border-color: #343434;
+		      border-width: 1px;
+		      border-radius: 4px;
+		      cursor: pointer;
+		      text-decoration: none;
+		      margin-left: 10px;
+		      z-index: 99999;
+		      font-family: 'button';
+		    }
+		  }
+		</style>
+		<script>
+		  function switchToChinese() {
+		    window.location.href = 'index.html';
+		  }
+		
+		  function switchToEnglish() {
+		    window.location.href = 'index-en.html';
+		  }  
+		</script>
+	</head>
+	<body>
+		<div class="lang-buttons-container">
+		  <button class="lang-button" onclick="switchToChinese()">中文</button>
+		  <button class="lang-button" onclick="switchToEnglish()">English</button>
+		</div>
+		<!-- 导航栏 -->
+		<!-- 移动端菜单按钮 -->
+		<div class="mobile-trigger">
+			<div class="bamboo-line"></div>
+			<div class="bamboo-line"></div>
+			<div class="bamboo-line"></div>
+		</div>
+		<!-- 新增桌面端触发条 -->
+		<div class="nav-trigger"></div>
+		<!-- 平板端滑动提示 -->
+		<!-- 在HTML中添加平板端触发箭头 -->
+		<svg class="tablet-trigger" viewBox="0 0 24 24">
+			<path fill="var(--ink-red)" d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z" />
+		</svg>
+		<!-- 垂直侧边导航结构 -->
+		<nav class="poetic-nav">
+			<!-- <div class="nav-header">
+				<div class="seal-logo">
+					<span class="chinese">文旅中国</span>
+					<span class="circle"></span>
+				</div>
+			</div> -->
+
+			<div class="nav-content">
+				<a href="#intro" class="nav-card">
+					<div class="deco-line"></div>
+					<!-- <span class="index">01</span> -->
+					<div class="text-box">
+						<h3 class="title">Intro</h3>
+						<!-- <p class="sub">“中国文化游”有潜力</p> -->
+					</div>
+					<div class="hover-mask"></div>
+				</a>
+				<a href="#chpt1" class="nav-card">
+					<div class="deco-line"></div>
+					<!-- <span class="index">01</span> -->
+					<div class="text-box">
+						<h3 class="title">Decoding "Chinese New Year":</h3>
+						<p class="sub">Cultural Travel in China has potential</p>
+					</div>
+					<div class="hover-mask"></div>
+				</a>
+				<a href="#chpt2" class="nav-card">
+					<div class="deco-line"></div>
+					<!-- <span class="index">01</span> -->
+					<div class="text-box">
+						<h3 class="title">Leveraging "China’s Policies"</h3>
+						<p class="sub">Cultural Travel in China has confidence</p>
+					</div>
+					<div class="hover-mask"></div>
+				</a>
+				<a href="#chpt3" class="nav-card">
+					<div class="deco-line"></div>
+					<!-- <span class="index">01</span> -->
+					<div class="text-box">
+						<h3 class="title">Spanning "China’s Map"</h3>
+						<p class="sub">Cultural Travel in China has choice</p>
+					</div>
+					<div class="hover-mask"></div>
+				</a>
+				<a href="#methods" class="nav-card">
+					<div class="deco-line"></div>
+					<!-- <span class="index">01</span> -->
+					<div class="text-box">
+						<h3 class="title">Conclusion</h3>
+						<!-- <p class="sub">“中国文化游”有潜力</p> -->
+					</div>
+					<div class="hover-mask"></div>
+				</a>
+				<!-- 重复其他导航项 -->
+			</div>
+		</nav>
+
+		<!-- 封面 -->
+		<div class="cover">
+			<img class="top" src="imgaes/maincover/maincover-en.png" width="90%" height="auto" />
+		</div>
+		<!-- 引言 -->
+		<div id="intro" class="part">
+			<div class="content intro-text">
+				<br /><br />
+				<p class="line1 welcome1">Dear Foreign Friends,</p>
+				<p class="line2 welcome2">I hope this letter finds you well.</p>
+				<p class="line3 welcome3">Today, I pick up my pen and, as a friend,  extend to you a heartfelt invitation visit China: embark on a brand-new journey and experience the beauty of this ancient country that has stood for a thousand years.</p>
+				<p class="line4 welcome4">Up to now, many foreign friends have already explored China, while others have set their sights on its wonders but have yet to take that first step.</p>
+				<p class="line5 welcome5">What landscapes and experiences of China have you already learned about?</p>
+				<p class="line6 welcome6">Is it Jinling (the ancient name of Nanjing), where the Qinhuai River carries old dreams on its boats through six dynasties of history? Or the golden splendor of Chang’an (the ancient name of Xi’an), a city adorned in royal grandeur,or the magnificent and splendid Chang 'an?</p>
+				<p class="line7 welcome">Is it XinJiang, where camel bells echo and herding trails through vast grasslands? The snowy wonderland of the North——Harbin，where European-style fairytales come alive? Or the layered peaks and murmuring streams of Fenghuang Ancient Town?</p>
+				<p class="line8 welcome8">Perhaps it’s the festive dragon dances and lion dances, the intricate craftsmanship of Shu brocade, the longing for rain-kissed Qinghua porcelain, the Head-pinned flowers, or the soothing melodies of Pingtan and the silk-thread art of Kunqu Opera?</p>
+				<p class="line9 welcome9">
+					This nation, steeped in millennia of history, and its people, who have thrived across the ages, still hold "hidden gems" of many great quality. They continue to live with sincerity, kindness, and diligence upon this profound land, and to embrace the world with open arms.</p>
+				<p class="line10 welcome10">
+					At this very moment, we write this letter to you, sincerely hoping you will visit China—not just once—to discover and experience it from many new perspectives. Through the journey, may the bridge between our cultures and hearts grow ever stronger and more convenient.</p>
+				<p class="line11 welcome11">What does China look like during the unique festivities of Intangible Cultural Heritage Spring Festival? What efforts have we made to ensure smoother travels? And what extraordinary, yet undiscovered, wonders still await?</p>
+				<p class="line12 welcome12">Follow me , trust me</p>
+			</div>
+		</div>
+
+		<!-- chapter1 非遗春节中国行 -->
+		<div id="chpt1" class="part">
+			<div class="cover" id="chpt1-cover">
+				<img class="chap1" id="chap1" src="imgaes/英文章节图/英文章节图/英文章节图1.jpg" alt="Background Image" />
+				<!-- <img class="chap2" id="chap2-ph" src="./images/chap2-cn-ph.png" alt="Background Image"> -->
+			</div>
+			<div class="content chpt1-text">
+				<p>In 2025, we welcomed the first Spring Festival after its official inclusion in the UNESCO Intangible Cultural Heritage list. An increasing number of foreign tourists visited China to celebrate the festival with us. 
+				According to the official statistics from the National Immigration Administration, during the Spring Festival holiday, the national border inspection authorities facilitated a total of 14.366 million inbound and outbound trips by Chinese and foreign travelers, 
+				marking a 6.3% increase compared to the same period last year. </p>
+				<p>Meanwhile, our analysis of tourism data from multiple provincial culture and tourism departments showed a year-on-year growth in inbound tourist numbers during the holiday season.</p>
+				<iframe src='https://flo.uri.sh/visualisation/21917114/embed' title='Interactive or visual content'
+					class='flourish-embed-iframe' frameborder='0' scrolling='no'
+					style='width:90%;height:500px;display: block; margin: 0 auto;'
+					sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe>
+				<p>When "China Tours" meet festive atmosphere, international social media witness foreign travelers document and share their experiences of China's beauty during the Spring Festival.
+				The records and evaluations also declare that a series of outstanding Chinese cultures related to the Spring Festival, a festival with a long history, have a place in the travels of foreign tourists.</p>
+			</div>
+			<div class="whitebox">
+				<div class="tiktok-text" id="tiktok-text">
+					<div class="content tiktok-p" id="tiktok-p0">
+						<p>We took "China Travel" and "Chinese new year" as the key words, and selected the short videos on tiktok that were posted around the Spring Festival and had high popularity. 
+						These clips, recorded by international travelers, showcase diverse festive celebrations across China - from lion dances and lantern festivals to dragon boat displays and calligraphy demonstrations - all proving particularly popular among foreign visitors.</p>
+					</div>
+					<!-- <div class="tiktok-p" id="tiktok-p1">
+						<p>我们爬取了这些视频评论文本，并对其进行了一些分析。</p>
+					</div> -->
+				</div>
+			</div>
+			<!-- 词频分析 -->
+			<div class="chpt1-ana1">
+				<div class="fixed-left">
+					<!-- 词频分析图 -->
+					<div class="fixed-element" id="fixed-element-0">
+						<iframe src='https://flo.uri.sh/visualisation/21845954/embed'
+							title='Interactive or visual content' class='flourish-embed-iframe' frameborder='0'
+							scrolling='no' style='width:100%;height:400px;'></iframe>
+					</div>
+					<!-- tripadvisor数据图 -->
+					<div class="fixed-element" id="fixed-element-2">
+						<div class="gobox" id="gobox">
+							<iframe src='https://flo.uri.sh/visualisation/22148078/embed'
+								title='Interactive or visual content' class='flourish-embed-iframe' frameborder='0'
+								scrolling='no' style='width:100%;height:400px;'></iframe>
+							<!-- <iframe src='https://flo.uri.sh/visualisation/16689989/embed' title='Interactive or visual content'
+					      class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:600px;'></iframe> -->
+						</div>
+					</div>
+				</div>
+				<div class="scroll-right">
+					<div class="whitebox">
+						<div class="word-text" id="word-text">
+							<div class="word-p" id="word-p0">
+								<p>Through word frequency analysis of English comments on these videos, we observed international netizens frequently using exclamations like "beautiful," "amazing," and "awesome" to praise cultural activities.
+									Words like "love", "like" and "want" also demonstrate their fondness for Chinese cultural activities. </p>
+								<span
+									style="background-color:#8ac92681 ;">It is worth mentioning that words related to Chinese culture such as "culture", "dragon", and "lights" have also appeared in the comments many times.</span>
+							</div>
+							<!-- <div class="word-p" id="word-p1">
+								<p>值得一提的是“culture、dragon、lights”等与中国文化相关的词也多次出现评论中。外国游客越来越关注中国文化。</p>
+							</div> -->
+						</div>
+						<div class="tripad-text" id="tripad-text">
+							<div class="tripad-p" id="tripad-p0">
+								<p>Looking through the lens of  the Spring Festival, but not limited to the period itself, we find that the cultural influence has long permeated "China travel".</p>
+								<p>On TripAdvisor, a global travel website, it can be found based on the number of reservations made by tourists for different types of trips that historical and cultural Tours are quite popular when traveling to China.</p>
+								<!-- <span style="background-color:#8ac92681 ;">中国文化成为外国游客入境游的重要吸引力。</span> -->
+							</div>
+							<!-- <div class="tripad-p" id="tripad-p1">
+								<p>中国文化成为外国游客入境游的重要吸引力。</p>
+							</div> -->
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="content chpt1-text">
+				<p>Meanwhile, experiencing culture in person has also become an important part of the cultural journey in China.</p>
+				<p>According to a special survey on the satisfaction of inbound tourists conducted by the China Tourism Academy, more than 60% of the respondents regarded experiencing Chinese culture as the main purpose of their trip to China.
+					The "2024 China Inbound Tourism Market Observation" released by Ctrip Scenic Spots Play on March 20th also shows that cultural experience products have become a new growth engine, with the booking volume of intangible cultural heritage workshops and folk performances soaring by 300%.</p>
+				<p>A group of foreign tourists have already experienced China's exquisite traditional culture in person, just like savoring Chinese cuisine.</p>
+				<p>On various social media platforms, the cultural experiences of overseas tourists traveling in China are being played: wearing beautiful hairpins, boldly trying red paper rubbing, and following the artisans of Jingdezhen to experience porcelain making...
+					Delving into culture has become an important "option" for overseas tourists traveling to China.</p>
+				<!-- <span style="background-color:#8ac92681 ;">展望2025年，我们有理由相信，文化，正在入境游中扮演着与外国友人“神交”的重要角色。</span> -->
+			</div>
+			<div class="wrapper">
+				<i id="left" class="fa-solid fa-angle-left"></i>
+				<div class="carousel">
+					<!-- 文字卡片示例 -->
+					<div class="card" draggable="false">
+						<!-- <h3 class="card-title">西安古城之旅</h3> -->
+						<p class="card-content">Kim Eun-yeon (a pseudonym) from Busan, South Korea, embarked on a 9-day in-depth tour of China during the South Korean Spring Festival holiday (January 28th - 30th), along with her asking for leave and weekends. 
+							Eun-yeon visited Shanghai and Quanzhou. The beautiful Quanzhou hairpin flowers left a deep impression on her. After learning from local villagers that "hairpin flowers represent the hope for a better life", 
+							she bought hairpin flower creative fridge magnets and took them home to give to her mother and sister.</p>
+					</div>
+					<div class="card" draggable="false">
+						<!-- <h3 class="card-title">江南水乡记</h3> -->
+						<p class="card-content">Slovak girl Katerina and her boyfriend came to China on New Year's Day. They enjoyed China's visa-free policy and found it very convenient. They planned to continue their visit to Beijing after New Year's Eve in Shanghai. 
+							At Longhua Ta Ying Space, Katerina, who has always been fond of Chinese history and culture, boldly attempted the rubbing technique. She used red paper to print a Fuwa holding a koi carp and happily took a photo with it.</p>
+					</div>
+					<div class="card" draggable="false">
+						<!-- <h3 class="card-title">江南水乡记</h3> -->
+						<p class="card-content">
+							At the end of 2024, the wechat Moments of the 240 visa-free transit in Jiangxi Province, China, porcelain-making craftsmanship of Jingdezhen, 
+							the intangible cultural heritage market of Mingyue Mountain, and the top ten bowls of intangible cultural heritage in Zhaoping, which welcomed a group of foreign friends.<br>
+							Ailin, a travel expert from Moldova, said, "Coming to Jingdezhen is like an elegant spiritual practice and an artistic baptism."<br>
+							Taylor, a tourist from the United States, experienced the dragon dance in person at the Mingyue Mountain Tourist Center Square. 
+							In Chinese, we just "join in the fun". We really love this feeling of reunion and joy. Taylor said.<br>
+							I heard online that Pingxiang is the hottest place in China, so I came to give it a try. Simon, a student from Afghanistan, said. 
+							The student beside him, Faisal, rushed to add, "I'm not afraid of spicy food. For these dishes, I asked my Chinese friends to teach me how to use chopsticks."</p>
+					</div>
+				</div>
+				<i id="right" class="fa-solid fa-angle-right"></i>
+			</div>
+			<div class="content chpt1-text">
+				<p>We believe that embarking on a "Chinese Cultural Tour" will enable you to touch the true face of this country's five-thousand-year history and Gain a brand-new experience of the beauty of Chinese culture for you.</p>
+			</div>
+		</div>
+
+		<!--  chapter2 行程畅通政策升级-->
+		<div id="chpt2" class="part">
+			<!-- 免签政策 -->
+			<div class="cover" id="chpt2-cover">
+				<img class="chap2" id="chap2" src="imgaes/英文章节图/英文章节图/英文章节图2.jpg" alt="Background Image" />
+				<!-- <img class="chap2" id="chap2-ph" src="./images/chap2-cn-ph.png" alt="Background Image"> -->
+			</div>
+			<div class="content chpt2-text">
+				<p> The Chinese government has taken multiple measures to enhance the convenience of inbound tourism, which also gives in-depth "Chinese cultural Tours" more confidence to be chosen.</p>
+				<p>First, China's visa-free entry policies is continuously being upgraded.</p>
+				<p>Since January 2024, China has successively piloted unilateral visa-free policies for 38 countries including Switzerland, Australia, Portugal, Finland and South Korea.</p>
+				<p>On December 17, 2024, the National Immigration Administration announced a new visa-free transit policy, extending the stay time of visa-free transit foreigners in China from the original 72 hours and 144 hours to 240 hours (10 days). 
+					At the same time, the number of entry ports for visa-free transit personnel was increased to 60, and the area of stay and activity was expanded to 24 provinces.</p>
+				<p>On March 8, 2025, Brunei officially implemented a visa-free entry policy for Chinese citizens, achieving mutual visa exemption between China and Brunei. As of now, China has achieved mutual visa-free access with 26 countries.</p>
+				<!-- 新加入免签政策国家入境游数据 Googletrends -->
+				<p>In addition, in February 2025, a visa-free policy was issued for ASEAN countries' tourist groups to enter Xishuangbanna, Yunnan Province. The local customs and traditions of this city are also awaiting the arrival of foreign tourists.</p>
+				<p>We have conducted a statistical analysis of the continents where 26 countries offer mutual visa-free access, 38 countries offer unilateral visa-free access, and 54 countries offer visa-free transit, as well as the straight-line distances from China.
+					By combining these policies, it can be found that China encourages long-distance countries to enjoy more abundant time and broader territory for inbound tourism in China. This makes in-depth "cultural tourism" more suitable for selection under such conditions.</p>
+				<div id="policy"> <!-- 距离图 -->
+					<iframe src='https://flo.uri.sh/visualisation/22334840/embed' title='Interactive or visual content'
+						class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:600px;'
+						sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe>
+				</div>
+				<div id="note">
+					<p>Data description: The straight-line distance measurement method is the "distance measurement" function of Gaode Maps. Starting from Beijing and ending at the capital of the country, the straight-line distance value is obtained.</p>
+				</div>
+				<p>To facilitate tourists' quick understanding of the visa-free entry policy, we offer a latest policy inquiry system here. You can check the visa policies for entering China from your own country.</p>
+				<!-- 政策地图 -->
+				<div id="policy"> <!-- ！！！文莱互勉啦 ！！！-->
+					<!-- <iframe src='https://flo.uri.sh/visualisation/21768102/embed' title='Interactive or visual content'
+						class='flourish-embed-iframe' id='policy' frameborder='0' scrolling='no'
+						style='width:100%;height:600px;z-index: 1;'
+						sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe> -->
+					<!-- 新地图	 -->
+					<iframe src='https://flo.uri.sh/visualisation/22727204/embed' title='Interactive or visual content' 
+						class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:600px;' 
+						sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe>
+				</div>
+				<div id="note" class="content">
+					<p>Data source: National Immigration Administration, Ministry of Foreign Affairs of the People's Republic of China<br />
+						Data Notes:<br />
+						1.The visa-exempt entry to China shown in the chart includes both ordinary passport holders exempt from visas and group tourist visa exemptions. 
+						For specific requirements, please refer to the List of Reciprocal Visa Exemption Agreements: http://cs.mfa.gov.cn/zggmcg/cgqz/qzxx_660462/202412/t20241231_11524380.shtml (update time: December 28, 2024);<br>
+						2.Regarding the reciprocal visa exemption policy with Ecuador: Currently, due to reasons on the Ecuadorian side, Chinese citizens holding ordinary passports must obtain a visa in advance for travel to Ecuador;<br />
+						3.The data in the chart was updated on March 31, 2025. Specific details may be subject to dynamic adjustments. 
+						It is recommended to consult the Chinese embassies or consulates in relevant countries or the National Immigration Administration of China before travel.</p>
+				</div>
+			</div>
+			<!-- 入境游其他方面的指南 -->
+			<div class="content chpt2-text">
+				<p>Meanwhile, services in all aspects of inbound tourism are also constantly improving. Except for the countries that enjoy visa-free convenience, 
+				the procedures for applying for entry visas are being simplified, and advance appointment queuing has been basically abolished. 
+				In response to the payment, transportation or other issues that passengers face after landing, major platforms and apps are also offering more convenient operations and greater convenience.</p>
+				<p>Here we offer a comprehensive guidebook covering all aspects, hoping to solve more operational problems for your "China trip" and eliminate more worries for your "cultural tour" that delves deeper in scope and content.</p>
+				<img src="imgaes/guide/guide-en.jpg"/>
+				<div id="note" class="content">
+					<p style="text-align: right;">Source: China Daily website, "China Travel Guide", eSender,ExploreChinaNow, Shanxi Tu 'an International Travel Service, Trip.com air tickets</p>
+				</div>
+				<p>Moreover, the number of flights has basically returned to the level of the same period in 2019, and the increasingly developed "China Speed" of high-speed rail has also made it easier to come to and travel through China, 
+				allowing you to embark on a "cultural journey" at high speed when visiting China.</p>
+				<p>We hope you can freely explore some journeys that are uniquely yours: ride a bike along the lake to chase the wind, search for homestays facing the sea and surrounded by flowers, 
+				take the light rail to cross the mountains and seas you want to reach, enjoy every unique-tasting delicacy, and take away souvenirs that belong to a certain period of time...</p>
+				<p>Our hope is that in China, here, we can offer the greatest support for every wish of yours.</p>
+			</div>
+		</div>
+
+		<!-- chapter3 文化体验推荐指南 -->
+		<div id="chpt3" class="part">
+			<div class="cover" id="chpt3-cover">
+				<img class="chap3" id="chap3" src="imgaes/英文章节图/英文章节图/英文章节图3.jpg" alt="Background Image" />
+				<!-- <img class="chap2" id="chap2-ph" src="./images/chap2-cn-ph.png" alt="Background Image"> -->
+			</div>
+			<div class="content chpt3-text">
+				<p>Meanwhile, we also hope that when you have the determination to embark on a "cultural journey" and have received the support you deserve, you can find the most suitable choice on this beautiful and vast land.</p>
+				<p>We chose the global travel website TripAdvisor. In the "Attractions" section, we selected keywords related to culture such as "Historical Attractions", "Monuments", and "Historical museums", 
+					screened the types of attractions, crawled the ratings, reviews and other data of attractions with more than 50 Chinese and foreign reviews, and conducted statistics on them.
+					If you want to visit cultural attractions in China, the sharing and comments of these foreign tourists can offer you some references.</p>
+				<p>Each circle in the map below represents a scenic spot. The larger the circle, the higher the popularity of the scenic spot. The popularity of a scenic spot is determined by the number of English reviews it has on TripAdvisor. 
+				The more reviews there are, the higher the popularity. Hover to view the scenic spot ratings provided by TripAdvisor. Click to view the word cloud composed of TripAdvisor's scenic spot reviews. 
+				Some scenic spots also include introductions to cultural experience projects obtained from the relevant sections within the scenic spots.</p>
+			</div>
+			<!-- AR交互视频-->
+			<!-- <div class="content chpt3-text">
+				<p id="note">扫描图片下方二维码后使用摄像头对准图片体验AR</p>
+				<img src="imgaes/AR/lion.png"/>
+			</div> -->
+			<!-- 文化景点地图 -->
+			<div style="height: 750px;">
+				<iframe src='https://flo.uri.sh/visualisation/22165722/embed' title='Interactive or visual content'
+					class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:100%;'
+					sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe>
+			</div>
+			<div class="content chpt3-text">
+				<p>To make up for the limitations of the data and perspectives of cultural-related scenic spots in TripAdvisor, we use the "Word-of-Mouth List" function of Ctrip, a Chinese online travel platform. 
+				We select cultural-related keywords such as "intangible cultural heritage and national trends", "ancient cities and towns", and "Artistic treasures", and screen domestic cultural scenic spots by month. 
+				The destinations, ratings and popularity of these scenic spots were statistically analyzed.</p>
+			</div>
+			<!-- 携程数据图 -->
+			<div class="scroll-container">
+				<!-- 左侧固定图表 -->
+				<div class="fixed-chart mobile-only">
+					<iframe src='https://flo.uri.sh/visualisation/22369810/embed' title='Interactive or visual content'
+						class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:600px;'
+						sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe>
+				</div>
+
+				<!-- 右侧滚动文案 -->
+				<div class="scroll-narrative">
+					<!-- 第一季度 -->
+					<div class="season-card">
+						<!-- <div class="chart-toggle">点击查看图表</div> -->
+						<!-- <h3 style="color:#8b4513; margin-bottom:1rem;">第一季度·春启江南</h3> -->
+						<p style="color:#5a4a42;">According to the statistical results, while exploring culture in spring, it also enters the season for flower and spring viewing. 
+							In Wuyuan, the rape fields in spring are bright orange and yellow, and the terraced fields are lush and green. 
+							In Shanghai, Suzhou and Hangzhou are dotted with peaches and pears, and plum and apricot blossoms are fragrant. 
+							In the west Ridge, there is a sea of clouds, and in the east Mountain, it is suitable for sea fishing.</p>
+					</div>
+					<!-- 第二季度 -->
+					<div class="season-card">
+						<!-- <h3 style="color:#8b4513; margin-bottom:1rem;">第二季度·京华盛景</h3> -->
+						<p style="color:#5a4a42;"> The scorching summer sun is blazing, the small lotus buds on West Lake are peeping out, and the beach in Xiamen is welcoming the season for beachcombing. 
+						The rafting in Central Hunan is so cool, and the snow water in Yulong is melting, making it perfect for boating. </p>
+					</div>
+					<!-- 第三季度 -->
+					<div class="season-card">
+						<!-- <h3 style="color:#8b4513; margin-bottom:1rem;">第三季度·西行漫记</h3> -->
+						<p style="color:#5a4a42;">When autumn comes to Hangzhou, osmanthus flowers are fragrant. 
+						Red maple leaves spread from north to south, from Xiangshan Park and Laojun Mountain to Orange Isle and Qiuxia Garden. 
+						The bonfire party by Lugu Lake is filled with singing and dancing, presenting a beautiful scene.</p>
+					</div>
+					<!-- 第四季度 -->
+					<div class="season-card">
+						<!-- <h3 style="color:#8b4513; margin-bottom:1rem;">第四季度·水墨婺源</h3> -->
+						<p style="color:#5a4a42;">The winter snow is falling all over the sky. The plum blossoms at Feilai Peak and Lion Grove Forest are as fragrant as ever. 
+						The ice waterfalls at Hu Yu and Long Xia are bone-chilling. But at Erling Mountain, the hot springs are warming people.</p>
+					</div>
+					<div class="chart-footer"></div>
+				</div>
+			</div>
+			<!-- 携程图 -->
+			<!-- 数据分析结果 -->
+			<!-- <a href="https://www.coze.cn/store/agent/7483545471857295371?bot_id=true">点击体验AI规划旅游行程</a> -->
+			<div class="content chpt3-text">
+				<p>Dear traveler, we look forward to the Chinese cultural tour taking you away not only a photo, but also the stories and beauty hidden among the historical sites and scenic spots.</p>
+			</div>
+		</div>
+
+		<!--  结语-->
+		<div class="coze-tip">
+			<p>Click the icon to get personalized travel advice.</p>
+		</div>
+		<div id="methods" class="part">
+			<div class="content methods-text">
+				<br><br>
+				<p>The above is all that we sincerely present and introduce to our foreign friends. 
+				If you already have the intention to visit China, we have created a Q&A AI mini-program, which is right at the bottom right corner of the page! </p>
+				<p>We hope it can help you solve the problems you encounter during your trip to China, provide more targeted travel recommendations, and enable tourists to conveniently plan their "China Tour" itineraries based on their own interests. 
+				You can try clicking on it and having a conversation with it to get your own unique travel cloud assistant. </p>
+			</div>
+			<div class="content methods-text">
+				<br>
+				<p>Chinese civilization has a long history. </p>
+				<p>The historical context of five thousand years，and it is our path of origin and also our future life. </p>
+				<p>We hope that visitors from all directions can come to China to experience and enjoy it firsthand. 
+				It's not just about traditional cuisine, but also about wearing beautiful hairpins, listening to gentle Pingtan, 
+				and touching the bustling Shu brocade, bringing more of your dreams about Chinese aesthetics to life. </p>
+				<p>We hope that the closely arranged modern cities and the moment when the Oriental Pearl Tower lights up at night will not be your entire impression of Chinese cities. 
+				We also want to give you the small Bridges and flowing water, the Miao villages and Tulou, and the charm and fortune of the ancient capital of six dynasties.</p>
+				<p>We hope that when you think of China, you will not only think of the four words "ancient country with a long history", 
+				but also think of Han ink calligraphy, Confucius, Mencius, Confucianism and Taoism, the golden age of poetry, the long-desolate thatched cottage and the city of Chang 'an that never sleeps. </p>
+				<p>Dear friends, we will always be here and always look forward to your arrival.</p>
+			</div>
+		</div>
+
+		<footer>
+			<div class="team">
+				<br><br><br><br><br>
+				 <div class="divider-line"></div>
+				<!-- <p>
+					有关本作品数据获取与分析的方法论，详见：<a href="https://docs.qq.com/aio/DTnljdWp5WllxZndF" class="method">方法论</a>
+				</p> -->
+				<h3 class="section-title">制作团队</h3>
+				<p>
+					Data collection and analysis: Cai Yuwei &nbsp Ouyang Xingyu<br><br>
+					Design & Data Visualization: Ouyang Xingyu &nbsp Cai Yuwei<br /><br />
+					Copywriting: Ouyang Xingyu &nbsp &nbsp &nbsp Front-end Development: Cai Yuwei<br><br>
+					Supervisor: Liu Ping<br><br>
+					Contact: caiyuwei0210@163.com</p>
+
+			</div>
+			<br>
+			<p>&copy Communication University of China · School of Journalism · 2025</p>
+			<br><br />
+		</footer>
+		
+		<!-- <div id="nav-intro">
+		  	<nav class="navbox">
+		  		<button class="navbox" id="tointro">引言</button>
+		  		<button class="navbox" id="tochpt1">part1</button>
+		  		<button class="navbox" id="tochpt2">part2</button>
+		  		<button class="navbox" id="tochpt3">part3</button>
+		  		<button class="navbox" id="tomethods">结语</button>
+		  	</nav>
+		  </div> -->
+		<!-- 智能体区域（放在页面最末尾） -->
+		<!-- <div id="coze-container">
+		  				<div class="intro-section">
+		  				    <h2>智能旅行助手</h2>
+		  				</div>
+		  		        <div class="content ">
+		  					<p>最后，我们制作了一个关于中国旅游答疑的ai小程序，以帮助外国友人解决在华旅行过程中的难题，进行更有针对性的旅行推荐，让游客朋友能便利地结合自己的兴趣制定“中国游”行程。</p>
+		  					<p>如果你阅读完以上内容仍然心有疑问，不妨与它对话，获得独属于你的“中国游”云助手吧~</p>
+		  				</div> -->
+		<!-- 必须提供挂载容器 -->
+		<!-- <div id="coze-container" style="width: 400px; height: 600px;">
+					<div class="coze-guide" id="guideTip">
+					    <div class="guide-arrow"></div>
+					    <div>
+							<p style="margin:0; color: #666;">我们提供了一个智能旅行规划助手</p>
+					        <p style="margin:0; color: #666;">需要帮助请点击右下角图标开启旅行助手</p>
+					    </div>
+					</div>
+					<script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.2.0-beta.5/libs/cn/index.js"></script>
+					<script>
+					  new CozeWebSDK.WebChatClient({
+					    config: {
+					      bot_id: '7483545471857295371',
+					    },
+					    componentProps: {
+					      title: 'Coze',
+					    },
+					    auth: {
+					      type: 'token',
+					      token: 'pat_aF0QdvKrgQoCAaEzdwNpl3uww9IPB3ZtTnfFVRvDbWfPfhB03FRud7yij6kethaL',
+					      onRefreshToken: function () {
+					        return 'pat_aF0QdvKrgQoCAaEzdwNpl3uww9IPB3ZtTnfFVRvDbWfPfhB03FRud7yij6kethaL'
+					      }
+					    }
+					  });
+					</script>
+				</div> -->
+
+
+		<!-- 引导提示 -->
+		<!-- <div id="guideTip" class="content">
+		  		            <p>点击右下角图标开启您的个性化旅行规划体验</p>
+		  		        </div> -->
+		</div>
+		<!-- SDK脚本 -->
+		<script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.1.0-beta.0/libs/cn/index.js">
+		</script>
+		<!-- <script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.2.0-beta.5/libs/cn/index.js"></script> -->
+		<script src="js/coze.js"></script>
+		<!-- <script src="js/coze_test.js"></script> -->
+		<!-- 初始化脚本 -->
+		<!-- <script src="js/nav.js"></script> -->
+		<!-- <script src="js/scroll-test1.js"></script> --> <!-- 合并版本 -->
+		<!-- <script src="js/scroll-test.js"></script> -->
+		<script src="js/scroll-test-xiecheng.js"></script> <!-- 调试携程图用这个-->
+		<script src="js/nav-test3.js"></script>
+		<script>
+			const carousel = document.querySelector(".carousel");
+			const arrows = document.querySelectorAll(".wrapper i");
+			const cards = document.querySelectorAll(".card");
+
+			let isDragStart = false,
+				isDragging = false,
+				prevPageX, prevScrollLeft, positionDiff;
+
+			// 获取卡片宽度（包含外边距）
+			const getCardWidth = () => {
+				const cardStyle = window.getComputedStyle(cards[0]);
+				return cards[0].offsetWidth + parseInt(cardStyle.marginLeft);
+			}
+
+			// 拖拽逻辑
+			const dragStart = (e) => {
+				isDragStart = true;
+				prevPageX = e.pageX || e.touches[0].pageX;
+				prevScrollLeft = carousel.scrollLeft;
+			}
+
+			const dragging = (e) => {
+				if (!isDragStart) return;
+				e.preventDefault();
+				carousel.classList.add("dragging");
+				positionDiff = (e.pageX || e.touches[0].pageX) - prevPageX;
+				carousel.scrollLeft = prevScrollLeft - positionDiff;
+				showHideArrows();
+			}
+
+			const dragStop = () => {
+				isDragStart = false;
+				carousel.classList.remove("dragging");
+				autoSlide();
+			}
+
+			// 箭头显示逻辑
+			const showHideArrows = () => {
+				const maxScroll = carousel.scrollWidth - carousel.clientWidth;
+				arrows[0].style.display = carousel.scrollLeft <= 0 ? "none" : "flex";
+				arrows[1].style.display = carousel.scrollLeft >= maxScroll ? "none" : "flex";
+			}
+
+			// 自动对齐
+			const autoSlide = () => {
+				if (carousel.scrollLeft === (carousel.scrollWidth - carousel.clientWidth)) return;
+
+				positionDiff = Math.abs(positionDiff);
+				const cardWidth = getCardWidth();
+				const valDifference = cardWidth - positionDiff;
+
+				if (carousel.scrollLeft > prevScrollLeft) {
+					carousel.scrollLeft += positionDiff > cardWidth / 3 ? valDifference : -positionDiff;
+				} else {
+					carousel.scrollLeft -= positionDiff > cardWidth / 3 ? valDifference : -positionDiff;
+				}
+			}
+
+			// 事件监听
+			arrows.forEach(btn => {
+				btn.addEventListener("click", () => {
+					carousel.scrollLeft += btn.id === "left" ? -getCardWidth() : getCardWidth();
+					setTimeout(showHideArrows, 60);
+				});
+			});
+
+			// 触摸/鼠标事件
+			carousel.addEventListener("mousedown", dragStart);
+			carousel.addEventListener("touchstart", dragStart);
+			document.addEventListener("mousemove", dragging);
+			document.addEventListener("touchmove", dragging);
+			document.addEventListener("mouseup", dragStop);
+			document.addEventListener("touchend", dragStop);
+			document.addEventListener("mouseleave", dragStop);
+
+			// 初始化隐藏箭头
+			showHideArrows();
+		</script>
+		<!-- 推荐使用官方最新SDK -->
+		<!-- <script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk@latest/libs/cn/index.js"></script> -->
+		<!-- AI旅游线路规划 -->
+	</body>
+</html>
