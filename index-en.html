@@ -17,6 +17,7 @@
 		<link rel="stylesheet" href="css/chpt1-ana1-test.css" />
 		<!-- <link rel="stylesheet" href="css/nav-test1.css"/> -->
 		<link rel="stylesheet" href="css/nav-test3.css" />
+		<link rel="stylesheet" href="css/xiecheng.css"/>
 		<!-- <link rel="stylesheet" href="css/coze.css"> -->
 		
 		<style>
@@ -77,6 +78,18 @@
 		  function switchToEnglish() {
 		    window.location.href = 'index-en.html';
 		  }  
+		</script>
+		<script>
+		  function showSeason(season) {
+		    // 移除所有激活状态
+		    document.querySelectorAll('.season-tab, .season-content').forEach(el => {
+		        el.classList.remove('active');
+		    });
+		    
+		    // 添加新的激活状态
+		    document.querySelector(`.season-tab[onclick="showSeason('${season}')"]`).classList.add('active');
+		    document.getElementById(season).classList.add('active');
+		}
 		</script>
 	</head>
 	<body>
@@ -411,45 +424,58 @@
 				The destinations, ratings and popularity of these scenic spots were statistically analyzed.</p>
 			</div>
 			<!-- 携程数据图 -->
-			<div class="scroll-container">
-				<!-- 左侧固定图表 -->
-				<div class="fixed-chart mobile-only">
-					<iframe src='https://flo.uri.sh/visualisation/22369810/embed' title='Interactive or visual content'
-						class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:600px;'
-						sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe>
+			<div class="season-section">
+				<div class="season-tabs">
+					<div class="season-tab active" onclick="showSeason('spring')">🌸 Spring</div>
+					<div class="season-tab" onclick="showSeason('summer')">🌴 Summer</div>
+					<div class="season-tab" onclick="showSeason('autumn')">🍁 Autumn</div>
+					<div class="season-tab" onclick="showSeason('winter')">❄️ Winter</div>
 				</div>
-
-				<!-- 右侧滚动文案 -->
-				<div class="scroll-narrative">
-					<!-- 第一季度 -->
-					<div class="season-card">
-						<!-- <div class="chart-toggle">点击查看图表</div> -->
-						<!-- <h3 style="color:#8b4513; margin-bottom:1rem;">第一季度·春启江南</h3> -->
-						<p style="color:#5a4a42;">According to the statistical results, while exploring culture in spring, it also enters the season for flower and spring viewing. 
-							In Wuyuan, the rape fields in spring are bright orange and yellow, and the terraced fields are lush and green. 
-							In Shanghai, Suzhou and Hangzhou are dotted with peaches and pears, and plum and apricot blossoms are fragrant. 
-							In the west Ridge, there is a sea of clouds, and in the east Mountain, it is suitable for sea fishing.</p>
-					</div>
-					<!-- 第二季度 -->
-					<div class="season-card">
-						<!-- <h3 style="color:#8b4513; margin-bottom:1rem;">第二季度·京华盛景</h3> -->
-						<p style="color:#5a4a42;"> The scorching summer sun is blazing, the small lotus buds on West Lake are peeping out, and the beach in Xiamen is welcoming the season for beachcombing. 
+				<div id="spring" class="season-content active">
+				    <div class="chart-container">
+						<iframe src='https://flo.uri.sh/visualisation/22763472/embed' title='Interactive or visual content' 
+							class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:600px;' 
+							sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe>
+				    </div>
+				    <div class="description">
+				        <p>According to the statistical results, while exploring culture in spring, it also enters the season for flower and spring viewing. 
+						In Wuyuan, the rape fields in spring are bright orange and yellow, and the terraced fields are lush and green. 
+						In Shanghai, Suzhou and Hangzhou are dotted with peaches and pears, and plum and apricot blossoms are fragrant. 
+						In the west Ridge, there is a sea of clouds, and in the east Mountain, it is suitable for sea fishing. </p>
+				    </div>
+				</div>
+				<div id="summer" class="season-content">
+				    <div class="chart-container">
+				        <iframe src='https://flo.uri.sh/visualisation/22775336/embed' title='Interactive or visual content' 
+							class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:600px;' 
+							sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe>
+				    </div>
+				    <div class="description">
+				        <p>The scorching summer sun is blazing, the small lotus buds on West Lake are peeping out, and the beach in Xiamen is welcoming the season for beachcombing. 
 						The rafting in Central Hunan is so cool, and the snow water in Yulong is melting, making it perfect for boating. </p>
-					</div>
-					<!-- 第三季度 -->
-					<div class="season-card">
-						<!-- <h3 style="color:#8b4513; margin-bottom:1rem;">第三季度·西行漫记</h3> -->
-						<p style="color:#5a4a42;">When autumn comes to Hangzhou, osmanthus flowers are fragrant. 
-						Red maple leaves spread from north to south, from Xiangshan Park and Laojun Mountain to Orange Isle and Qiuxia Garden. 
+				    </div>
+				</div>
+				<div id="autumn" class="season-content">
+				    <div class="chart-container">
+				        <iframe src='https://flo.uri.sh/visualisation/22778277/embed' title='Interactive or visual content' 
+							class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:600px;' 
+							sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe>
+				    </div>
+				    <div class="description">
+				        <p>When autumn comes to Hangzhou, osmanthus flowers are fragrant. Red maple leaves spread from north to south, from Xiangshan Park and Laojun Mountain to Orange Isle and Qiuxia Garden. 
 						The bonfire party by Lugu Lake is filled with singing and dancing, presenting a beautiful scene.</p>
-					</div>
-					<!-- 第四季度 -->
-					<div class="season-card">
-						<!-- <h3 style="color:#8b4513; margin-bottom:1rem;">第四季度·水墨婺源</h3> -->
-						<p style="color:#5a4a42;">The winter snow is falling all over the sky. The plum blossoms at Feilai Peak and Lion Grove Forest are as fragrant as ever. 
+				    </div>
+				</div>
+				<div id="winter" class="season-content">
+				    <div class="chart-container">
+				        <iframe src='https://flo.uri.sh/visualisation/22780483/embed' title='Interactive or visual content' 
+							class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:600px;' 
+							sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe>
+				    </div>
+				    <div class="description">
+				        <p>The winter snow is falling all over the sky. The plum blossoms at Feilai Peak and Lion Grove Forest are as fragrant as ever. 
 						The ice waterfalls at Hu Yu and Long Xia are bone-chilling. But at Erling Mountain, the hot springs are warming people.</p>
-					</div>
-					<div class="chart-footer"></div>
+				    </div>
 				</div>
 			</div>
 			<!-- 携程图 -->
