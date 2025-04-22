@@ -367,38 +367,53 @@
 				<p>为了弥补TripAdvisor中文化相关景点的数据和视角的局限性，我们使用中国在线旅行平台携程的“口碑榜单”功能， 选用“非遗国潮”“古城古镇”等文化相关的关键词和“季节特色体验”，按月份对国内文化景点进行筛选，统计了这些景点的目的地、评分和热度。</p>
 			</div>
 			<!-- 携程数据图 -->
-			<div class="scroll-container">
-			    <!-- 左侧固定图表 -->
-			    <div class="fixed-chart">
-			        <iframe src='https://flo.uri.sh/visualisation/22369810/embed' title='Interactive or visual content' 
-					class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:600px;' 
-					sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe>
-			    </div>
-			
-			    <!-- 右侧滚动文案 -->
-			    <div class="scroll-narrative">
-			        <!-- 第一季度 -->
-			        <div class="season-card">
-<!-- 			            <h3 style="color:#8b4513; margin-bottom:1rem;">第一季度·春启江南</h3> -->
-			            <p style="color:#5a4a42;">从统计结果来看，春季探寻文化的同时也进入赏花赏春时节，婺源春日油菜花田橙黄明亮、梯田绿意盎然，沪上苏杭桃梨交映、梅杏芬芳，西岭有云海，东山宜海钓；</p>
-			        </div>
-			        <!-- 第二季度 -->
-			        <div class="season-card">
-<!-- 			            <h3 style="color:#8b4513; margin-bottom:1rem;">第二季度·京华盛景</h3> -->
-			            <p style="color:#5a4a42;">夏日烈阳炎炎，西湖小荷露尖，厦门滩头迎来赶海季节，湘中漂流好凉爽，玉龙雪水融化、正好泛舟；</p>
-			        </div>
-			        <!-- 第三季度 -->
-			        <div class="season-card">
-<!-- 			            <h3 style="color:#8b4513; margin-bottom:1rem;">第三季度·西行漫记</h3> -->
-			            <p style="color:#5a4a42;">秋来杭上金桂飘香，红枫自北向南从香山公园、老君山浸染到橘子洲、秋霞圃，泸沽湖旁篝火晚会踏歌载舞好风光；</p>
-			        </div>
-			        <!-- 第四季度 -->
-			        <div class="season-card">
-<!-- 			            <h3 style="color:#8b4513; margin-bottom:1rem;">第四季度·水墨婺源</h3> -->
-			            <p style="color:#5a4a42;">冬雪漫天，飞来峰、狮子林梅香如故，虎峪龙峡冰瀑寒冷彻骨，二灵山正是温泉暖人时。</p>
-			        </div>
-				<div class="chart-footer"></div>
-			    </div>
+			<div class="season-section">
+				<div class="season-tabs">
+					<div class="season-tab active" onclick="showSeason('spring')">🌸 春季</div>
+					<div class="season-tab" onclick="showSeason('summer')">🌴 夏季</div>
+					<div class="season-tab" onclick="showSeason('autumn')">🍁 秋季</div>
+					<div class="season-tab" onclick="showSeason('winter')">❄️ 冬季</div>
+				</div>
+				<div id="spring" class="season-content active">
+				    <div class="chart-container">
+						<iframe src='https://flo.uri.sh/visualisation/22708023/embed' title='Interactive or visual content' 
+							class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:600px;' 
+							sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe>
+				    </div>
+				    <div class="description">
+				        <p>春季探寻文化的同时也进入赏花赏春时节，婺源春日油菜花田橙黄明亮、梯田绿意盎然，沪上苏杭桃梨交映、梅杏芬芳，西岭有云海，东山宜海钓；</p>
+				    </div>
+				</div>
+				<div id="summer" class="season-content">
+				    <div class="chart-container">
+				        <iframe src='https://flo.uri.sh/visualisation/22708914/embed' title='Interactive or visual content' 
+							class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:600px;' 
+							sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe>
+				    </div>
+				    <div class="description">
+				        <p>夏日烈阳炎炎，西湖小荷露尖，厦门滩头迎来赶海季节，湘中漂流好凉爽，玉龙雪水融化、正好泛舟；</p>
+				    </div>
+				</div>
+				<div id="autumn" class="season-content">
+				    <div class="chart-container">
+				        <iframe src='https://flo.uri.sh/visualisation/22709343/embed' title='Interactive or visual content' 
+							class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:600px;' 
+							sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe>
+				    </div>
+				    <div class="description">
+				        <p>秋来杭上金桂飘香，红枫自北向南从香山公园、老君山浸染到橘子洲、秋霞圃，泸沽湖旁篝火晚会踏歌载舞好风光；</p>
+				    </div>
+				</div>
+				<div id="winter" class="season-content">
+				    <div class="chart-container">
+				        <iframe src='https://flo.uri.sh/visualisation/22709676/embed' title='Interactive or visual content' 
+							class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:600px;' 
+							sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe>
+				    </div>
+				    <div class="description">
+				        <p>冬雪漫天，飞来峰、狮子林梅香如故，虎峪龙峡冰瀑寒冷彻骨，二灵山正是温泉暖人时。</p>
+				    </div>
+				</div>
 			</div>
 			
 			<div class="content chpt3-text">
