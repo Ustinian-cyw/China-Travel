@@ -17,6 +17,7 @@
 		<link rel="stylesheet" href="css/chpt1-ana1-test.css"/>
 		<!-- <link rel="stylesheet" href="css/nav-test1.css"/> -->
 		<link rel="stylesheet" href="css/nav-test3.css"/>
+		<link rel="stylesheet" href="css/xiecheng.css"/>
 		<!-- <link rel="stylesheet" href="css/coze.css"> -->
 
 		<style>
@@ -79,6 +80,18 @@
 		  function switchToEnglish() {
 		    window.location.href = 'index-en.html';
 		  }  
+		</script>
+		<script>
+		function showSeason(season) {
+		    // 移除所有激活状态
+		    document.querySelectorAll('.season-tab, .season-content').forEach(el => {
+		        el.classList.remove('active');
+		    });
+		    
+		    // 添加新的激活状态
+		    document.querySelector(`.season-tab[onclick="showSeason('${season}')"]`).classList.add('active');
+		    document.getElementById(season).classList.add('active');
+		}
 		</script>
 	</head>
 	<body>
