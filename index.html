@@ -18,8 +18,74 @@
 		<!-- <link rel="stylesheet" href="css/nav-test1.css"/> -->
 		<link rel="stylesheet" href="css/nav-test3.css"/>
 		<!-- <link rel="stylesheet" href="css/coze.css"> -->
+
+		<style>
+		  .lang-button {
+		    display: inline-block;
+		    padding: 10px 20px;
+		    font-size: 14px;
+		    /* color: #343434;
+		    background-color: #f9d268;
+		    border-color: #343434; */
+			color: #f5e6c8;
+			background-color: #9b1a1f;
+			border-color: #d4af37;
+		    border-width: 2px;
+		    border-radius: 4px;
+		    cursor: pointer;
+		    text-decoration: none;
+		    margin-left: 10px;
+		    z-index: 99999;
+		    font-family: 'button';
+		  }
+		
+		  .lang-button:hover {
+		    background-color: #7a0e12;
+		  }
+		
+		  .lang-buttons-container {
+		    position: absolute;
+		    top: 10px;
+		    right: 20px;
+		    z-index: 99999;
+		  }
+		
+		  @media only screen and (max-width: 768px) {
+		    .lang-button {
+		      display: inline-block;
+		      padding: 5px 10px;
+		      font-size: 12px;
+		      /* color: #343434;
+		      background-color: #f9d268;
+		      border-color: #343434; */
+			  color: #f5e6c8;
+			  background-color: #9b1a1f;
+			  border-color: #d4af37;
+		      border-width: 1px;
+		      border-radius: 4px;
+		      cursor: pointer;
+		      text-decoration: none;
+		      margin-left: 10px;
+		      z-index: 99999;
+		      font-family: 'button';
+		    }
+		  }
+		</style>
+		<script>
+		  function switchToChinese() {
+		    window.location.href = 'index.html';
+		  }
+		
+		  function switchToEnglish() {
+		    window.location.href = 'index-en.html';
+		  }  
+		</script>
 	</head>
 	<body>
+		<div class="lang-buttons-container">
+		  <button class="lang-button" onclick="switchToChinese()">中文</button>
+		  <button class="lang-button" onclick="switchToEnglish()">English</button>
+		</div>
 		<!-- 导航栏 -->
 		<!-- 移动端菜单按钮 -->
 		    <div class="mobile-trigger">
