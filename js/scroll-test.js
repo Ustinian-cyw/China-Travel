@@ -45,22 +45,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // 携程数据图
 // 滚动动画触发
-function checkScroll() {
-	const cards = document.querySelectorAll('.season-card');
-	cards.forEach(card => {
-		const cardTop = card.getBoundingClientRect().top;
-		if (cardTop < window.innerHeight * 0.8) {
-			card.classList.add('active');
-		}
-	});
-}
+// function checkScroll() {
+// 	const cards = document.querySelectorAll('.season-card');
+// 	cards.forEach(card => {
+// 		const cardTop = card.getBoundingClientRect().top;
+// 		if (cardTop < window.innerHeight * 0.8) {
+// 			card.classList.add('active');
+// 		}
+// 	});
+// }
 
-// 优化滚动性能
-let isScrolling;
-window.addEventListener('scroll', () => {
-	window.clearTimeout(isScrolling);
-	isScrolling = setTimeout(checkScroll, 50);
-}, false);
+// // 优化滚动性能
+// let isScrolling;
+// window.addEventListener('scroll', () => {
+// 	window.clearTimeout(isScrolling);
+// 	isScrolling = setTimeout(checkScroll, 50);
+// }, false);
 
-// 初始化触发
-checkScroll();
+// // 初始化触发
+// checkScroll();
