@@ -325,8 +325,7 @@ footer p {
 .spacing{
 	height: 60px;
 }
-.divider-line::before/* ,
-.divider-line::after */ {
+.divider-line::before {
     content: "☁☁☁";
     color: #9b7355;
     font-size: 1.4em;
