@@ -21,10 +21,13 @@ document.addEventListener('DOMContentLoaded', () => {
 		            },
 		            auth: {
 		                type: 'token',
-				token: 'pat_jm1GawDHLxpVWSyjWNqMxujtxY1X0sOgYxz7REPUunOK6ouyvFBZjQUA8M9AjlCk',
-				onRefreshToken: () => 'pat_jm1GawDHLxpVWSyjWNqMxujtxY1X0sOgYxz7REPUunOK6ouyvFBZjQUA8M9AjlCk'
+				token: 'pat_BoQ1q0QIu1ktzwJ3lOukXYtuGdpaTCR0gNJvkVP8jKvjEqL2tbe6RYy4ns3qEXxH',
+				onRefreshToken: () => 'pat_BoQ1q0QIu1ktzwJ3lOukXYtuGdpaTCR0gNJvkVP8jKvjEqL2tbe6RYy4ns3qEXxH'    
+				// token: 'pat_jm1GawDHLxpVWSyjWNqMxujtxY1X0sOgYxz7REPUunOK6ouyvFBZjQUA8M9AjlCk',
+				// onRefreshToken: () => 'pat_jm1GawDHLxpVWSyjWNqMxujtxY1X0sOgYxz7REPUunOK6ouyvFBZjQUA8M9AjlCk'
 		                // token: 'pat_aF0QdvKrgQoCAaEzdwNpl3uww9IPB3ZtTnfFVRvDbWfPfhB03FRud7yij6kethaL',
 		                // onRefreshToken: () => 'pat_aF0QdvKrgQoCAaEzdwNpl3uww9IPB3ZtTnfFVRvDbWfPfhB03FRud7yij6kethaL'
+				
 		            }
 		        });
 		
