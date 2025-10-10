@@ -22,8 +22,11 @@ document.addEventListener('DOMContentLoaded', () => {
 		            auth: {
 		                type: 'token',
 						// 2025.8.24-2025.9.23
-						token: 'pat_f3Kq9ztxwqxzuZX8sKpBpb8K0vQxcJgDnxyQitw6quYFIdHCwZSa86Q9HNlBGSUk',
-				onRefreshToken: () => 'pat_f3Kq9ztxwqxzuZX8sKpBpb8K0vQxcJgDnxyQitw6quYFIdHCwZSa86Q9HNlBGSUk'
+						token: 'pat_Z2meWQ4YPTmurrxQ8UCCJq5x0BwVyaWH7UDl6CP4mM703kAfnJvCyfbhbKTKTULj',
+				onRefreshToken: () => 'pat_Z2meWQ4YPTmurrxQ8UCCJq5x0BwVyaWH7UDl6CP4mM703kAfnJvCyfbhbKTKTULj'
+						
+				// 		token: 'pat_f3Kq9ztxwqxzuZX8sKpBpb8K0vQxcJgDnxyQitw6quYFIdHCwZSa86Q9HNlBGSUk',
+				// onRefreshToken: () => 'pat_f3Kq9ztxwqxzuZX8sKpBpb8K0vQxcJgDnxyQitw6quYFIdHCwZSa86Q9HNlBGSUk'
 				    
 				// token: 'pat_1UeMdWhKiDKOo9AGaaOjuqC3HqPIYi8AquGjHM7hzQV7mLqAZmWRn8WrVAAl5AST',
 				// onRefreshToken: () => 'pat_1UeMdWhKiDKOo9AGaaOjuqC3HqPIYi8AquGjHM7hzQV7mLqAZmWRn8WrVAAl5AST'
