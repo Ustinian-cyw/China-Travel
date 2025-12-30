@@ -21,9 +21,14 @@ document.addEventListener('DOMContentLoaded', () => {
 		            },
 		            auth: {
 		                type: 'token',
+						//2025.12.30-2026.1.29
+						token: 'pat_Gs4JaKytD3oQXRh407HQeYyMVjCkuapVSfIuqjspCFD58UkgIuVQVGEfKyM09TkH',
+				onRefreshToken: () => 'pat_Gs4JaKytD3oQXRh407HQeYyMVjCkuapVSfIuqjspCFD58UkgIuVQVGEfKyM09TkH'
+
+	
 						// 2025.11.19-12.19
-						token: 'pat_JNUIjdygNBcVU6iQZNJ4awLb32nkAQgAvVVkf9K2scftIDrIsEqaDNGoM8pmwNrE',
-				onRefreshToken: () => 'pat_JNUIjdygNBcVU6iQZNJ4awLb32nkAQgAvVVkf9K2scftIDrIsEqaDNGoM8pmwNrE'
+				// 		token: 'pat_JNUIjdygNBcVU6iQZNJ4awLb32nkAQgAvVVkf9K2scftIDrIsEqaDNGoM8pmwNrE',
+				// onRefreshToken: () => 'pat_JNUIjdygNBcVU6iQZNJ4awLb32nkAQgAvVVkf9K2scftIDrIsEqaDNGoM8pmwNrE'
 
 						// 2025.8.24-2025.9.23
 				// 		token: 'pat_Z2meWQ4YPTmurrxQ8UCCJq5x0BwVyaWH7UDl6CP4mM703kAfnJvCyfbhbKTKTULj',
